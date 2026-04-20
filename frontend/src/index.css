@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563EB;
+  --color-primary-light: #EFF6FF;
+  --color-success: #059669;
+  --color-warning: #D97706;
+  --color-border: #E2E8F0;
+  --color-text-main: #1E293B;
+  --color-text-muted: #64748B;
+  --color-bg-body: #F8FAFC;
+  --color-bg-card: #FFFFFF;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: var(--color-bg-body);
+  color: var(--color-text-main);
+}

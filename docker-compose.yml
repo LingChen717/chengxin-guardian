@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    env_file:
+      - ./backend/.env
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_BASE_URL=
+    depends_on:
+      - backend
